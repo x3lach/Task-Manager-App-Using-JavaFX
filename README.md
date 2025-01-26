@@ -28,7 +28,7 @@ A Java-based desktop application for managing personal tasks. This application a
   - Task count displayed (e.g., "1/2 tasks completed").
 
 - **Export Functionality**:
-  - Export tasks to `.txt` or `.csv` files.
+  - Export tasks to `.txt` files.
   - Export individual tasks or the entire task list.
 
 - **User Interface**:
