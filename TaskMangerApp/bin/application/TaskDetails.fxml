@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" 
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="application.TaskDetailsController">
+    
+    <center>
+        <VBox spacing="10" style="-fx-padding: 20;">
+            <Label text="Title:" style="-fx-font-weight: bold;"/>
+            <Label fx:id="titleLabel" />
+            
+            <Label text="Description:" style="-fx-font-weight: bold;"/>
+            <TextArea fx:id="descriptionArea" editable="false" wrapText="true"/>
+            
+            <Label text="Due Date:" style="-fx-font-weight: bold;"/>
+            <Label fx:id="dueDateLabel" />
+            
+            <Label text="Priority:" style="-fx-font-weight: bold;"/>
+            <Label fx:id="priorityLabel" />
+            
+            <Label text="Status:" style="-fx-font-weight: bold;"/>
+            <Label fx:id="statusLabel" />
+            
+            <Label text="Category:" style="-fx-font-weight: bold;"/>
+            <Label fx:id="categoryLabel" />
+        </VBox>
+    </center>
+    
+    <bottom>
+        <Button text="Close" onAction="#closeWindow" 
+                style="-fx-padding: 10; -fx-background-color: #ff6666; -fx-text-fill: white;"
+                BorderPane.alignment="CENTER"/>
+    </bottom>
+</BorderPane>

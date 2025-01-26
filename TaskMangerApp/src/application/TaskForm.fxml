@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/11.0.1" 
+      xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="application.TaskFormController"
+      style="-fx-padding: 15;">
+    
+    <!-- Title -->
+    <Label text="Title:" style="-fx-font-weight: bold;"/>
+    <TextField fx:id="titleField" />
+    
+    <!-- Description -->
+    <Label text="Description:" style="-fx-font-weight: bold;"/>
+    <TextArea fx:id="descriptionField" prefRowCount="3"/>
+    
+    <!-- Due Date -->
+    <Label text="Due Date:" style="-fx-font-weight: bold;"/>
+    <DatePicker fx:id="dueDatePicker" />
+    
+    <!-- Priority -->
+    <Label text="Priority:" style="-fx-font-weight: bold;"/>
+    <ComboBox fx:id="priorityComboBox" />
+    
+    <!-- Category -->
+    <Label text="Category:" style="-fx-font-weight: bold;"/>
+    <ComboBox fx:id="categoryComboBox" />
+    
+    <!-- Status -->
+    <Label text="Status:" style="-fx-font-weight: bold;"/>
+    <ComboBox fx:id="statusComboBox" />
+    
+    <!-- Reminder -->
+    <Label text="Reminder (Days Before):" style="-fx-font-weight: bold;"/>
+    <Spinner fx:id="reminderSpinner" />
+    
+    <!-- Recurrence Section -->
+    <Label text="Recurrence Settings:" style="-fx-font-weight: bold; -fx-padding: 5 0 0 0;"/>
+    <CheckBox fx:id="recurringCheckbox" text="Recurring Task" style="-fx-padding: 0 0 5 0;"/>
+    
+    <HBox spacing="10">
+        <VBox spacing="5">
+            <Label text="Interval:"/>
+            <ComboBox fx:id="recurrenceIntervalCombo" prefWidth="120"/>
+        </VBox>
+        <VBox spacing="5">
+            <Label text="Frequency (times):"/>
+            <Spinner fx:id="recurrenceFrequencySpinner" prefWidth="120"/>
+        </VBox>
+    </HBox>
+
+    <!-- Action Buttons -->
+    <HBox spacing="10" style="-fx-padding: 10 0 0 0;">
+        <Button text="Save" onAction="#saveTask" style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+        <Button text="Cancel" onAction="#cancel" style="-fx-background-color: #ff6666; -fx-text-fill: white;"/>
+    </HBox>
+</VBox>
